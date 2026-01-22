@@ -441,15 +441,15 @@
 
         /* Bottom Image Area */
         .judge-img-container {
-            margin-top: auto;
-            position: relative;
-            height: 220px;
-            display: flex;
-            align-items: flex-end;
-            justify-content: center;
-            overflow: hidden;
-            width: 100%;
-        }
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
 
         /* The Curved Backdrop Shape */
         .judge-backdrop-shape {
@@ -472,15 +472,16 @@
         }
 
         .judge-img {
-            position: relative;
-            z-index: 2;
-            height: 200px; /* Fixed height for consistency */
-            width: auto;
-            object-fit: contain;
-            filter: grayscale(30%);
-            transition: filter 0.4s ease, transform 0.4s ease;
-            margin-bottom: -5px; /* Tuck slightly to hide bottom edge */
-        }
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    filter: grayscale(30%);
+    transition: filter 0.4s ease, transform 0.4s ease;
+}
+
 
         .judge-card:hover .judge-img {
             filter: grayscale(0%);
